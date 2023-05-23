@@ -19,7 +19,7 @@ DATE2=`date "+%b (%m) %d %Y"`
 
 echo "---> Creating info page"
 
-PWD=pwd
+PWD='pwd'
 echo "pwd = $PWD"
 #echo "Page built on $DATE" >> ./info.html
 echo "Page build on $DATE2" >> ./info.html
