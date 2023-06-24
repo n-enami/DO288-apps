@@ -9,18 +9,23 @@ echo "---> Enabling s2i support in httpd24 image"
 config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
-echo "---> Installing application source"
+echo "---> installing application source"
+echo "Before cp command"
+PWD=$(pwd)
+echo "Present Working Directory is : $PWD"
+
 cp -Rfv /tmp/src/*.html ./
 
-#DATE=date "+%b %d, %Y @ %H:%M %p"
-DATE=`date "+%b %d, %Y @ %H:%M %p"`
+echo "After cp command"
+PWD=$(pwd)
+echo "Present Working Directory is : $PWD"
 
-echo "---> Creating info page"
+DATE=$date "+%b %d, %Y @ %H:%M:%S %p"
+echo "---> Createing info page"
 echo "Page build on $DATE" >> ./info.html
-echo "Proudky served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html	
+echo "Proudly served by Apache HTTP server version $HTTPD_VERSION" >> ./info.html
 
-
-####### CUSTOMIZATION ENDS HERE ############
+######## CUSTOMIZATION ENDS HERE ############
 
 if [ -d ./httpd-cfg ]; then
   echo "---> Copying httpd configuration files..."
