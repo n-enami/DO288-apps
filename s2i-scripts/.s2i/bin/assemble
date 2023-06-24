@@ -11,7 +11,7 @@ config_s2i
 ######## CUSTOMIZATION STARTS HERE ############
 echo "---> installing application source"
 echo "Before cp command"
-PWD=$(pwd)
+PWD="pwd"
 echo "Present Working Directory is : $PWD"
 
 cp -Rfv /tmp/src/*.html ./
@@ -22,8 +22,8 @@ echo "Present Working Directory is : $PWD"
 
 DATE=`date "+%b %d, %Y @ %H:%M:%S %p"`
 echo "---> Createing info page"
-echo "Page build on $DATE"
-echo "Page build on $DATE" >> ./info.html
+echo "Page built on $DATE"
+echo "Page built on $DATE" >> ./info.html
 echo "Proudly served by Apache HTTP server version $HTTPD_VERSION"
 echo "Proudly served by Apache HTTP server version $HTTPD_VERSION" >> ./info.html
 
