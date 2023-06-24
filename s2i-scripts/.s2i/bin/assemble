@@ -20,7 +20,7 @@ echo "After cp command"
 PWD=$(pwd)
 echo "Present Working Directory is : $PWD"
 
-DATE=$date "+%b %d, %Y @ %H:%M:%S %p"
+DATE=`$date "+%b %d, %Y @ %H:%M:%S %p"`
 echo "---> Createing info page"
 echo "Page build on $DATE" >> ./info.html
 echo "Proudly served by Apache HTTP server version $HTTPD_VERSION" >> ./info.html
