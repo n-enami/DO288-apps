@@ -14,7 +14,7 @@ cp -Rf /tmp/src/*.html ./
 
 DATE=`date "+%b %d, %Y @ %H:%M:%S %p"`
 echo "Page build on $DATE" >> ./info.html
-exho "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
+echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
 
 
 ######## CUSTOMIZATION ENDS HERE ############
